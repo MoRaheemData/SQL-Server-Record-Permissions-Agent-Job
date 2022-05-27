@@ -1,4 +1,4 @@
-use DbaToolbox;
+use [EnterDBNameHere];
 go
 
 /*
@@ -22,17 +22,12 @@ go
 /*
 	Create schema
 */
-use [DbaToolbox];
-go
 create schema [security_audit];
 go
 
 /*
 	Create tables
 */
-use [DbaToolbox];
-go
-
 create table [security_audit].[RecordPermissionsAudit](
 	[RecordPermissionsAuditID] [int] IDENTITY(1,1) NOT NULL,
 	[ParentAuditID] int default -1 not null,

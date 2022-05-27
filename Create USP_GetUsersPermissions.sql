@@ -1,12 +1,7 @@
-USE [DbaToolbox]
-GO
-/****** Object:  StoredProcedure [security_audit].[USP_GetUsersPermissions]    Script Date: 4/15/2022 1:14:16 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+use [EnterDBNameHere];
+go
 
-CREATE OR ALTER PROCEDURE [security_audit].[USP_GetUsersPermissions]
+create or alter procedure [security_audit].[USP_GetUsersPermissions]
 	@PrincipalName varchar(128)
 as
 begin

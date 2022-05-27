@@ -1,4 +1,4 @@
-use [DbaToolbox];
+use [EnterDBNameHere];
 go
 
 create or alter procedure [security_audit].[USP_GatherADGroupMembership]
