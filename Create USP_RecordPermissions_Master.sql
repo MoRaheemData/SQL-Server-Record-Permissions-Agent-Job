@@ -226,7 +226,7 @@ begin try
 	
 	begin tran
 
-	exec [security_audit].[USP_RecordDroppedPrincipals];
+	exec [security_audit].[USP_RecordDroppedPrincipals] @JobLastRunDateTime_Formatted;
 	
 	commit
 
