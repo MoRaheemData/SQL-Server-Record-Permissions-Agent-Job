@@ -1,7 +1,7 @@
 use [EnterDBNameHere];
 go
 
-create or alter procedure [security_audit].[USP_RecordDroppedPrincipals]
+create or alter procedure [security_audit].[USP_RecordDroppedPrincipals] ( @JobLastRunDateTime datetime )
 as
 begin
 
@@ -53,6 +53,8 @@ begin try
 			and d.[sid] = i.[sid]
 			and d.PrincipalName = i.PrincipalName
 			and d.PrincipalType = i.PrincipalType;
+	where
+		d.PollDate > @JobLastRunDateTime;
 	
 	commit;
 
